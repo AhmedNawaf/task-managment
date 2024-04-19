@@ -1,0 +1,21 @@
+{
+  "name": "@task-managment/main",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A simple task managment built using React and NestJs",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:app\"",
+    "dev:server": "npm run start:dev -w server",
+    "dev:app": "npm run dev -w app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "server",
+    "app"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
