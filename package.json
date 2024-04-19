@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:app\"",
     "dev:server": "npm run start:dev -w server",
-    "dev:app": "npm run dev -w app"
+    "dev:app": "npm run dev -w app",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,16 @@
   ],
   "devDependencies": {
     "concurrently": "^8.2.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "3.2.5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{json,html,css,sass,scss}": [
+      "prettier --write --ignore-unknown"
+    ]
   }
 }
